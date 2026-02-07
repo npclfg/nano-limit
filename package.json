@@ -1,0 +1,63 @@
+{
+  "name": "nano-limit",
+  "version": "1.0.0",
+  "description": "Tiny concurrency and rate limiter with priorities, AbortSignal, and zero dependencies.",
+  "author": "npclfg",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/npclfg/nano-limit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/npclfg/nano-limit/issues"
+  },
+  "homepage": "https://github.com/npclfg/nano-limit#readme",
+  "main": "./dist/cjs/limit.js",
+  "module": "./dist/esm/limit.js",
+  "types": "./dist/cjs/limit.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/cjs/limit.d.ts",
+        "default": "./dist/esm/limit.js"
+      },
+      "require": {
+        "types": "./dist/cjs/limit.d.ts",
+        "default": "./dist/cjs/limit.js"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "npm run build:cjs && npm run build:esm",
+    "build:cjs": "tsc",
+    "build:esm": "tsc -p tsconfig.esm.json && node scripts/postbuild-esm.js",
+    "test": "npm run build && node test/run.js",
+    "verify": "npm run build && node scripts/verify.js",
+    "bench": "npm run build && node benchmark/bench.js",
+    "sample": "npm run build && node sample/app.js",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "keywords": [
+    "limit",
+    "rate-limit",
+    "concurrency",
+    "throttle",
+    "queue",
+    "async",
+    "promise",
+    "p-limit",
+    "bottleneck",
+    "typescript"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=16"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
