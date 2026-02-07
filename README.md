@@ -1,8 +1,8 @@
 # nano-limit
 
-[![npm version](https://img.shields.io/npm/v/nano-limit)](https://npmjs.com/package/nano-limit)
-[![npm downloads](https://img.shields.io/npm/dm/nano-limit)](https://npmjs.com/package/nano-limit)
-[![license](https://img.shields.io/npm/l/nano-limit)](https://github.com/npclfg/nano-limit/blob/main/LICENSE)
+[![npm version](https://img.shields.io/npm/v/@npclfg/nano-limit)](https://npmjs.com/package/@npclfg/nano-limit)
+[![npm downloads](https://img.shields.io/npm/dm/@npclfg/nano-limit)](https://npmjs.com/package/@npclfg/nano-limit)
+[![license](https://img.shields.io/npm/l/@npclfg/nano-limit)](https://github.com/npclfg/nano-limit/blob/main/LICENSE)
 
 Tiny concurrency and rate limiter with priorities, AbortSignal, and zero dependencies.
 
@@ -32,7 +32,7 @@ You try bottleneck but:
 ## The Fix
 
 ```typescript
-import { createLimit } from "nano-limit";
+import { createLimit } from "@npclfg/nano-limit";
 
 // Concurrency + rate limiting in one
 const limit = createLimit({
@@ -71,7 +71,7 @@ That's it. Concurrency limiting, rate limiting, priorities, and cancellation in 
 ## Installation
 
 ```bash
-npm install nano-limit
+npm install @npclfg/nano-limit
 ```
 
 **Requirements:** Node.js 16+ or modern browsers (ES2020)
@@ -79,7 +79,7 @@ npm install nano-limit
 ## Quick Start
 
 ```typescript
-import { createLimit } from "nano-limit";
+import { createLimit } from "@npclfg/nano-limit";
 
 // Concurrency only (like p-limit)
 const limit = createLimit({ concurrency: 5 });

@@ -1,5 +1,5 @@
 {
-  "name": "nano-limit",
+  "name": "@npclfg/nano-limit",
   "version": "1.0.0",
   "description": "Tiny concurrency and rate limiter with priorities, AbortSignal, and zero dependencies.",
   "author": "npclfg",
